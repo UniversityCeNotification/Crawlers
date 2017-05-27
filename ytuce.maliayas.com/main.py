@@ -3,11 +3,13 @@ from bs4 import BeautifulSoup
 import re
 import hashlib
 from pymongo import MongoClient
+from dotenv import DotEnv
+dotenv = DotEnv('../.env')
 
 if __name__ == '__main__':
     print('[+] Python Crawler Started: ytuce.maliayas.com')
-    client = MongoClient('mongodb://localhost:27017')
-    db = client['universityce'] # which database
+    client = MongoClient(dotenv.get('MongoDbUrl', 'mongodb://localhost:27017'))
+    db = client[dotenv.get('MongoDbName', 'universityce')] # which database
     crawlers = db.crawlers  # which collection
 
     """ Crawling Operations """
