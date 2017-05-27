@@ -9,11 +9,17 @@ if [[ "$status" = "n" ]]; then
 fi
 
 runAllCrawlers() {
-  for i in $(ls -d ./*/init.sh)
+  for i in $(ls -d ./*/main.py)
   do
-      echo ${i%%/init.sh}
-      cd ${i%%/init.sh}
-      bash init.sh
+      echo ${i%%/main.py}
+      cd ${i%%/main.py}
+      # Crawler Starting
+      virtualenv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+      python main.py
+      deactivate
+      # Crawler Finished
       cd -
   done
 }
