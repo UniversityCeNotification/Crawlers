@@ -8,10 +8,9 @@ dotenv = DotEnv('../.env')
 
 if __name__ == '__main__':
     print('[+] Python Crawler Started: ytuce.maliayas.com')
-    client = MongoClient(dotenv.get('MongoDbUrl', 'mongodb://localhost:27017'))
+    client = MongoClient(dotenv.get('MongoDbUri', 'mongodb://localhost:27017'))
     db = client[dotenv.get('MongoDbName', 'universityce')] # which database
     crawlers = db.crawlers  # which collection
-
     """ Crawling Operations """
     url = 'https://ytuce.maliayas.com/'
     r  = requests.get(url)

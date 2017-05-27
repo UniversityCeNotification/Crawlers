@@ -4,7 +4,7 @@ read -p 'There is .env file in crawler?(y/n) : ' status
 if [[ "$status" = "n" ]]; then
   read -p "MongoDbUrl:" url
   read -p "MongoDbName:" name
-  echo "MongoDbUrl='$url'" > .env
+  echo "MongoDbUri='$url'" > .env
   echo "MongoDbName='$name'" >> .env
 fi
 
