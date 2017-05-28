@@ -2,7 +2,7 @@
 All university crawlers, crawling university page then insert mongodb
 
 
-<h5>MongoDB Document is like json on the bottom, id should hash with md5</h5>
+<h4>MongoDB Document is like json on the bottom;</h4>
 
 ```json
 {
@@ -18,3 +18,13 @@ All university crawlers, crawling university page then insert mongodb
   "status": "new"
 }
 ```
+<h6>Content should hash with md5, then assign id</h6>
+
+<h4>University Computer Science or Engineer List</h4>
+
+|       University                                          |       Crawling Site                       |  Status  |
+| --------------------------------------------------------- |:-----------------------------------------:|:--------:|
+| [Yildiz Technical](https://www.ce.yildiz.edu.tr/)         |  https://ytuce.maliayas.com/              |   Ok     |
+| [Istanbul](http://ce.istanbul.edu.tr/)                    |  http://ce.istanbul.edu.tr/               |   Nope   |
+| [Pamukkale](http://www.pamukkale.edu.tr/bilgisayar)       |  http://www.pamukkale.edu.tr/bilgisayar   |   Nope   |
+| [Istanbul Technical](http://www.bb.itu.edu.tr/)           |  http://www.bb.itu.edu.tr/                |   Nope   |
